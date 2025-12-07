@@ -1,0 +1,163 @@
+:root {
+  --main-color: #FB2E86;
+  --dark-blue: #0D0E43;
+  --black: #000000;
+  --light-gray: #E7E6EF;
+  --white: #ffffff;
+  --footer-bg: #EEEFFB;
+  --text-gray: #8A8FB9;
+  --text-dark: #151875;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* header*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--light-gray);
+    padding: 15px 0;
+}
+
+.header .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.header .logo img {
+    height: 34px;
+    width: auto;
+}
+
+.header .nav-links {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.header .nav-links a {
+    text-decoration: none;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 0;
+ transition: color 0.3s ease, font-size 0.3s ease; 
+}
+
+.header .nav-links a:hover {
+    color: var(--main-color);
+   font-size: 18px;
+}
+
+
+.header .nav-links .active {
+    color: var(--main-color);
+}
+
+.header .arrow-svg {
+    width: 14px;
+    height: 14px;
+}
+
+.header .search-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--light-gray);
+    border-radius: 3px;
+    overflow: hidden;
+    height: 45px;
+}
+
+.header .search-box input {
+    width: 260px;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    font-size: 15px;
+    color: #666;
+}
+
+.header .search-box button {
+    height: 100%;
+    width: 55px;
+    border: none;
+    background-color: var(--main-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.header .search-box button:hover {
+    background-color: #e02878;
+}
+
+.header .search-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.menu{
+    display:none;
+}
+
+/* main*/
+main {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.content{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.content h1 {
+  color: var(--dark-blue);
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+/* Header responsive */
+@media screen and (min-width:0) and (max-width: 990px) {
+
+
+  .header .nav-links,
+  .header .search-box {
+    display: none;
+  }
+
+  .header .menu {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  .header .header-container {
+    padding: 0 15px;
+  }
+
+  .header .logo img {
+    height: 30px;
+  }
+
+}
+
+
